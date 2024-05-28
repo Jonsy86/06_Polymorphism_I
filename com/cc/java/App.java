@@ -10,22 +10,21 @@ public class App {
         Worker worker = new Worker();
         Drone drone = new Drone();
  
-
-        output(queen.doYourJob());
-        output(queen.fly());
-        output("---------------");
-
-        output(worker.doYourJob());
-        output(worker.fly());
-        output("---------------");
-
-        output(drone.doYourJob());
-        output(drone.fly());
-        output("---------------");
+        pollObj(queen);
+        pollObj(drone);
+        pollObj(worker);
 
 
         
     }
+
+
+    private static void pollObj(Honeybee obj){
+        output(obj.doYourJob());
+        output(obj.fly());
+        output("-----------------");
+    }
+
 
    
    
